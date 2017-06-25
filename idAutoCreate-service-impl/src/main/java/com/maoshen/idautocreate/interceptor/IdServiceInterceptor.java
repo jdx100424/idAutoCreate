@@ -1,4 +1,4 @@
-package com.maoshen.common.interceptor;
+package com.maoshen.idautocreate.interceptor;
 
 
 import org.aspectj.lang.annotation.Aspect;
@@ -13,11 +13,11 @@ import com.maoshen.component.aop.interceptor.service.ServiceInterceptor;
 @Aspect
 @Component
 @Order(0)
-public class CommonServiceInterceptor extends ServiceInterceptor {
-	private static final Logger LOGGER = LoggerFactory.getLogger(CommonServiceInterceptor.class);
+public class IdServiceInterceptor extends ServiceInterceptor {
+	private static final Logger LOGGER = LoggerFactory.getLogger(IdServiceInterceptor.class);
 
-	public CommonServiceInterceptor() {
-		LOGGER.info("{} {}_service Interceptor is start", CommonServiceInterceptor.class.getName(), getServiceName());
+	public IdServiceInterceptor() {
+		LOGGER.info("{} {}_service Interceptor is start", IdServiceInterceptor.class.getName(), getServiceName());
 	}
 
 	@Override

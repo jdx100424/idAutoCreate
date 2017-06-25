@@ -13,6 +13,8 @@
 		<module>idAutoCreate-dao</module>
 		<module>idAutoCreate-service-impl</module>
 		<module>idAutoCreate-util</module>
+		<module>idAutoCreate-dubbo-impl</module>
+		<module>idAutoCreate-dubbo</module>
 	</modules>
 
 	<properties>
