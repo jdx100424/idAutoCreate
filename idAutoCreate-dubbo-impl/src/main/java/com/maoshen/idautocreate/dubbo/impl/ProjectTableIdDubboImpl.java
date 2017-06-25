@@ -25,6 +25,11 @@ public class ProjectTableIdDubboImpl implements ProjectTableIdDubbo {
 		ProjectTableIdDuo ProjectTableIdDuo = new ProjectTableIdDuo();
 		//redis lock
 		ProjectTableIdDto dto = projectTableIdServiceImpl.getProjectTableId(projectName,tableName);
+		ProjectTableIdDuo.setId(dto.getId());
+		ProjectTableIdDuo.setProjectName(dto.getProjectName());
+		ProjectTableIdDuo.setTableName(dto.getTableName());
+		ProjectTableIdDuo.setStartId(dto.getNowAutoId());
+		ProjectTableIdDuo.setEndId(dto.getNowAutoId() + dto.getAddCount() - 1);
 		return ProjectTableIdDuo;
 	}
 }

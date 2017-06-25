@@ -28,6 +28,6 @@ public class IdServiceInterceptor extends ServiceInterceptor {
 
 	@Override
 	public String getServiceName() {
-		return "commonSpringMvc";
+		return "idAutoCreate";
 	}
 }

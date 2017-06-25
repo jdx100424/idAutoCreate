@@ -82,10 +82,7 @@
 		<property name="mapperLocations" value="classpath*:mapper/*Mapper.xml" />
 		<property name="plugins">
 			<list>
-				<!-- 
 				<ref bean="mybatisReplicationDataSourceInterceptor" />
-				 -->
-				<ref bean="mybatisReplicationDataSourceInterceptorSeg" />
 			</list>
 		</property>
 	</bean>
