@@ -41,28 +41,6 @@
 		<servlet-name>mvc</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	
-	    <!--#################################################### XssFilter ############################################# -->
-    <filter>
-        <filter-name>XssSqlFilter</filter-name>
-        <filter-class>com.maoshen.component.filter.XssFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>XssSqlFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-        <dispatcher>REQUEST</dispatcher>
-    </filter-mapping>
-    
-    <!--#################################################### UserFilter ############################################# -->
-     <filter>
-        <filter-name>UserFilter</filter-name>
-        <filter-class>com.maoshen.component.filter.UserFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>UserFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-        <dispatcher>REQUEST</dispatcher>
-    </filter-mapping>
     
      <!--#################################################### log4j ############################################# -->
     <context-param>
@@ -76,13 +54,4 @@
     <listener>
         <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
     </listener>
-    
-    <error-page> 
-		<error-code>404</error-code> 
-		<location>/errorpage/404.jsp</location> 
-	</error-page> 
-	<error-page> 
-		<error-code>500</error-code> 
-		<location>/errorpage/500.jsp</location> 
-	</error-page>	
 </web-app>

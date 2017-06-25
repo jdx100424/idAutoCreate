@@ -28,10 +28,6 @@
     </mvc:message-converters>
   </mvc:annotation-driven>
 
-  <!-- <mvc:interceptors> <mvc:interceptor> <mvc:mapping path="/**" /> <mvc:exclude-mapping 
-    path="/error/**" /> <bean class="com.maoshen.interceptor.LoginInterceptor" 
-    /> </mvc:interceptor> </mvc:interceptors> -->
-
   <bean
     class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
     <!-- spring 4.2.5 remove
@@ -76,8 +72,4 @@
     class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
     <!--property name="maxUploadSize" value="100000"/ -->
   </bean>
-
-  <mvc:resources mapping="/images/**" location="/images/" />
-  <mvc:resources mapping="/css/**" location="/css/" />
-  <mvc:resources mapping="/js/**" location="/js/" />
 </beans>
