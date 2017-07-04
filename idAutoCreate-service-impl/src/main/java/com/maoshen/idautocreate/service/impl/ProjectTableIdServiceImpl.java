@@ -44,7 +44,7 @@ public class ProjectTableIdServiceImpl {
 			}
 			
 			ProjectTableIdDto projectTableIdDto = new ProjectTableIdDto();
-			BeanUtils.copyProperties(projectTableIdDto, projectTableId);
+			BeanUtils.copyProperties(projectTableId,projectTableIdDto);
 			return projectTableIdDto;
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);
