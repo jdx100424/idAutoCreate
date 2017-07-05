@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.maoshen.idautocreate.dao.ProjectTableIdDao">
+	<resultMap id="projectTableIdResult" type="com.maoshen.idautocreate.domain.ProjectTableId">
+		<result column="id" property="id" jdbcType="BIGINT" />
+		<result column="project_name" property="projectName" jdbcType="VARCHAR" />
+		<result column="table_name" property="tableName" jdbcType="VARCHAR" />
+		<result column="now_auto_id" property="nowAutoId" jdbcType="BIGINT" />
+		<result column="add_count" property="addCount" jdbcType="BIGINT" />
+	</resultMap>
+
+	<select id="getProjectTableId" resultMap="projectTableIdResult" parameterType="map">
+		select id,project_name,table_name,now_auto_id,add_count from project_table_id where
+		project_name=#{projectName,jdbcType=VARCHAR} and 
+		table_name=#{tableName,jdbcType=VARCHAR}
+	</select>
+
+	<update id="update" parameterType="java.util.Map">
+		update project_table_id set now_auto_id = now_auto_id + addCount
+		where project_name=#{projectName,jdbcType=VARCHAR} and 
+		table_name=#{tableName,jdbcType=VARCHAR}
+	</insert>
+</mapper>
+
