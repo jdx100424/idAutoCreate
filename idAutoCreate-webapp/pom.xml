@@ -17,6 +17,12 @@
       <type>jar</type>
     </dependency>
     <dependency>
+      <groupId>idAutoCreate-dubbo-impl</groupId>
+      <artifactId>idAutoCreate-dubbo-impl</artifactId>
+      <version>0.0.2</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
       <groupId>idAutoCreate-util</groupId>
       <artifactId>idAutoCreate-util</artifactId>
       <version>0.0.2</version>
