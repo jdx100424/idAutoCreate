@@ -16,7 +16,7 @@
 	</select>
 
 	<update id="update" parameterType="java.util.Map">
-		update project_table_id set now_auto_id = now_auto_id + addCount
+		update project_table_id set now_auto_id = now_auto_id + add_count
 		where project_name=#{projectName,jdbcType=VARCHAR} and 
 		table_name=#{tableName,jdbcType=VARCHAR}
 	</update>
