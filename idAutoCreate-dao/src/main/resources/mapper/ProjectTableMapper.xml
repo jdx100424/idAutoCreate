@@ -19,6 +19,6 @@
 		update project_table_id set now_auto_id = now_auto_id + addCount
 		where project_name=#{projectName,jdbcType=VARCHAR} and 
 		table_name=#{tableName,jdbcType=VARCHAR}
-	</insert>
+	</update>
 </mapper>
 
